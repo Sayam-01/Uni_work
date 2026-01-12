@@ -51,6 +51,9 @@ int main(){
         printf("%i ", arr[i]);
     }
 
+    printf("\nBY SAYAM SHRESTHA\n");
+
+    
     //free array after using it
     free(arr);
     return 0;
