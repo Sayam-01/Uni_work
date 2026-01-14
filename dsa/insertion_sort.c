@@ -46,7 +46,7 @@ int main(){
         printf("%i ", arr[i]);
     }
 
-    printf("\nBY SAYAM SHRESTHA\n");
+    printf("\n----By Sayam Shrestha-----\n");
 
     //free array after using it
     free(arr);
