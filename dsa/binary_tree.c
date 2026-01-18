@@ -54,8 +54,8 @@ void preorder(struct node* root){
 
 void postorder(struct node* root){
     if(root != NULL){
-        preorder(root->left);
-        preorder(root->right);
+        postorder(root->left);
+        postorder(root->right);
         printf("%i -> ", root->data);
     }
 }
