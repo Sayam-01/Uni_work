@@ -38,7 +38,7 @@ int main() {
 
             for (j = 1; j < f; j++) {
                 if (freq[j] < minFreq ||
-                   (freq[j] == minFreq && time[j] < time[pos])) {
+                    (freq[j] == minFreq && time[j] < time[pos])) {
                     minFreq = freq[j];
                     pos = j;
                 }
