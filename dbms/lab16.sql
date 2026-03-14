@@ -1,7 +1,7 @@
 .headers on 
 .mode box
 
-SELECT albumId, title 
+SELECT albumId, title, artistId 
 FROM albums
 WHERE artistId BETWEEN 10 AND 20;
 

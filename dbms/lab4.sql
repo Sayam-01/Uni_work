@@ -1,11 +1,11 @@
 .headers on 
 .mode box
 
-SELECT name FROM tracks
+SELECT name, UnitPrice FROM tracks
 WHERE trackid <= 10
 ORDER BY UnitPrice ASC;
 
-SELECT name FROM tracks 
+SELECT name, UnitPrice FROM tracks 
 WHERE trackid <=10
 ORDER BY UnitPrice DESC;
 

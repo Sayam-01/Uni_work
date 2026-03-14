@@ -1,7 +1,7 @@
 .headers on 
 .mode box
 
-SELECT CustomerId, FirstName, LastName
+SELECT CustomerId, FirstName, LastName, Company
 FROM Customers
 WHERE Company IS NOT NULL;
 
