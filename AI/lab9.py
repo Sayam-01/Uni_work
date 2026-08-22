@@ -1,7 +1,7 @@
 # Alpha-Beta Pruning Algorithm
 
 def alpha_beta(depth, node_index, maximizing_player,
-               scores, alpha, beta, target_depth):
+            scores, alpha, beta, target_depth):
 
     # Leaf node
     if depth == target_depth:

@@ -8,13 +8,13 @@ def is_safe(board, row, col, n):
 
     # Check upper-left diagonal
     for i, j in zip(range(row - 1, -1, -1),
-                     range(col - 1, -1, -1)):
+                    range(col - 1, -1, -1)):
         if board[i] == j:
             return False
 
     # Check upper-right diagonal
     for i, j in zip(range(row - 1, -1, -1),
-                     range(col + 1, n)):
+                    range(col + 1, n)):
         if board[i] == j:
             return False
 
