@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 6 - Styled Form Controls</title>
+<style>
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+  background-color: yellow;
+}
+input:invalid, textarea:invalid {
+  color: red;
+}
+input:valid, textarea:valid {
+  border: 2px solid green;
+}
+fieldset {
+  width: 320px;
+  padding: 15px;
+}
+legend {
+  font-weight: bold;
+  color: #333;
+}
+
+</style>
+</head>
+<body>
+
+<form>
+  <fieldset>
+    <legend>Applicant Details</legend>
+    <label>Name: <input type="text" required></label><br><br>
+    <label>Email: <input type="email" required></label><br><br>
+    <label>Phone: <input type="tel" pattern="[0-9]{10}" required></label><br><br>
+    <label>Password: <input type="password" required></label><br><br>
+    <label>Message: <textarea required></textarea></label><br><br>
+    <label>Gender:
+      <input type="radio" name="gender"> Male
+      <input type="radio" name="gender"> Female
+    </label><br><br>
+    <label>Subscribe: <input type="checkbox"></label><br><br>
+    <label>Resume: <input type="file"></label><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+
+  <hr>
+  <footer style="text-align:left; font-weight:bold; margin-top:20px;">
+    By Sayam Shrestha
+  </footer>
+
+</body>
+</html>

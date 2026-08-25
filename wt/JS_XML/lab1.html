@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 1 - Popup Boxes</title>
+
+</head>
+<body>
+
+<h2>JavaScript Popup Boxes</h2>
+<button onclick="showAlert()">Show Alert</button>
+<button onclick="showConfirm()">Show Confirm</button>
+<button onclick="showPrompt()">Show Prompt</button>
+<p id="result"></p>
+
+<script>
+function showAlert() {
+  alert("This is an alert box!");
+}
+function showConfirm() {
+  var result = confirm("Do you want to continue?");
+  document.getElementById("result").innerText = "Confirm result: " + result;
+}
+function showPrompt() {
+  var name = prompt("Enter your name:", "Sayam");
+  document.getElementById("result").innerText = "Prompt result: " + name;
+}
+</script>
+
+
+  <hr>
+  <footer style="text-align:left; font-weight:bold; margin-top:20px;">
+    By Sayam Shrestha
+  </footer>
+
+</body>
+</html>

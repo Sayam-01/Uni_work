@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 12 - Image Maps</title>
+</head>
+<body>
+
+<h2>Client-Side Image Map</h2>
+<img src="https://picsum.photos/seed/mapclient/400/300" usemap="#worldmap" alt="Client side map">
+<map name="worldmap">
+  <area shape="rect" coords="0,0,200,150" href="https://www.google.com" alt="Top Left">
+  <area shape="rect" coords="200,150,400,300" href="https://www.bing.com" alt="Bottom Right">
+</map>
+
+<h2>Server-Side Image Map</h2>
+<a href="https://www.example.com/cgi-bin/imagemap">
+  <img src="https://picsum.photos/seed/mapserver/400/300" ismap alt="Server side map">
+</a>
+
+
+  <hr>
+  <footer style="text-align:left; font-weight:bold; margin-top:20px;">
+    By Sayam Shrestha
+  </footer>
+
+</body>
+</html>

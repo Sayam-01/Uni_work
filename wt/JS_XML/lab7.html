@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 7 - Try Catch</title>
+
+</head>
+<body>
+
+<h2>Try-Catch Error Handling</h2>
+<button onclick="testTryCatch()">Run Function</button>
+<p id="result"></p>
+
+<script>
+function riskyOperation(x) {
+  if (typeof x !== "number") {
+    throw new Error("Input is not a number!");
+  }
+  return 100 / x;
+}
+
+function testTryCatch() {
+  var output = "";
+  try {
+    var result = riskyOperation("abc");
+    output = "Result: " + result;
+  } catch (err) {
+    output = "Caught an error: " + err.message;
+  } finally {
+    output += " (finally block executed)";
+  }
+  document.getElementById("result").innerText = output;
+}
+</script>
+
+
+  <hr>
+  <footer style="text-align:left; font-weight:bold; margin-top:20px;">
+    By Sayam Shrestha
+  </footer>
+
+</body>
+</html>

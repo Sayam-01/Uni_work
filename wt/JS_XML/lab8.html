@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 8 - jQuery Events</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<h2>jQuery Event Handling</h2>
+<button id="btn">Click Me</button>
+<div id="box" style="width:150px;height:80px;background:lightgreen;margin:10px 0;">Mouseout here</div>
+<input type="text" id="txt" placeholder="Type here (keyup)">
+<form id="frm">
+  <input type="text" placeholder="Submit me">
+  <input type="submit" value="Go">
+</form>
+<p id="log"></p>
+
+<script>
+$(document).ready(function() {
+  $("#btn").on("click", function() {
+    $("#log").text("Button clicked (jQuery onclick).");
+  });
+  $("#box").on("mouseout", function() {
+    $("#log").text("Mouse left the box (jQuery mouseout).");
+  });
+  $("#txt").on("keyup", function() {
+    $("#log").text("Key released, value: " + $(this).val());
+  });
+  $("#frm").on("submit", function(e) {
+    e.preventDefault();
+    $("#log").text("Form submitted (jQuery submit event).");
+  });
+});
+</script>
+
+
+  <hr>
+  <footer style="text-align:left; font-weight:bold; margin-top:20px;">
+    By Sayam Shrestha
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 27 - Job Application Form</title>
+</head>
+<body>
+
+<h2>Job Application Form</h2>
+<form action="#" method="post">
+  <label>Full Name: <input type="text" name="fullname" required></label><br><br>
+  <label>Position Applying For:
+    <select name="position">
+      <option value="developer">Web Developer</option>
+      <option value="designer">UI/UX Designer</option>
+      <option value="tester">QA Tester</option>
+    </select>
+  </label><br><br>
+  <label>Cover Letter:<br>
+    <textarea name="coverletter" rows="6" cols="40" placeholder="Write your cover letter here..."></textarea>
+  </label><br><br>
+  <label>Upload Resume: <input type="file" name="resume" accept=".pdf,.doc,.docx"></label><br><br>
+  <input type="submit" value="Apply">
+</form>
+
+
+  <hr>
+  <footer style="text-align:left; font-weight:bold; margin-top:20px;">
+    By Sayam Shrestha
+  </footer>
+
+</body>
+</html>

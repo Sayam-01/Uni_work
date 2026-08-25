@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 2 - Objects and Constructors</title>
+
+</head>
+<body>
+
+<h2>JavaScript Objects Demo</h2>
+<p id="output"></p>
+
+<script>
+// Object literal
+var student = {
+  name: "Sayam Shrestha",
+  age: 21,
+  course: "BIT",
+  showDetails: function() {
+    return this.name + " (" + this.age + ") - " + this.course;
+  }
+};
+
+// Constructor function
+function Student(name, age, course) {
+  this.name = name;
+  this.age = age;
+  this.course = course;
+  this.showDetails = function() {
+    return this.name + " (" + this.age + ") - " + this.course;
+  };
+}
+
+var s2 = new Student("Ram Sharma", 22, "CSIT");
+
+document.getElementById("output").innerHTML =
+  "Object literal: " + student.showDetails() + "<br>" +
+  "Constructed object: " + s2.showDetails();
+</script>
+
+
+  <hr>
+  <footer style="text-align:left; font-weight:bold; margin-top:20px;">
+    By Sayam Shrestha
+  </footer>
+
+</body>
+</html>

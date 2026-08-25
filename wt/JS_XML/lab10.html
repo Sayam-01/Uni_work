@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 10 - jQuery Animations</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<h2>jQuery Animation</h2>
+<div id="animBox" style="width:100px;height:100px;background:tomato;position:relative;"></div>
+<br>
+<button id="animateBtn">Animate</button>
+<button id="resetBtn">Reset</button>
+
+<script>
+$(document).ready(function() {
+  $("#animateBtn").click(function() {
+    $("#animBox").animate({ left: "250px", opacity: 0.5, height: "150px", width: "150px" }, 1500);
+  });
+  $("#resetBtn").click(function() {
+    $("#animBox").animate({ left: "0px", opacity: 1, height: "100px", width: "100px" }, 1000);
+  });
+});
+</script>
+
+
+  <hr>
+  <footer style="text-align:left; font-weight:bold; margin-top:20px;">
+    By Sayam Shrestha
+  </footer>
+
+</body>
+</html>

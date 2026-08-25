@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lab12.xsl"?>
+<!DOCTYPE Report SYSTEM "lab12.dtd">
+<!-- By Sayam Shrestha -->
+<Report>
+  <Students>
+    <Student StudId="S1">
+      <Name><First>Sayam</First><Last>Shrestha</Last></Name>
+      <Status>Active</Status>
+      <CrsTaken CrsCode="C1">CrsTaken1</CrsTaken>
+      <CrsTaken CrsCode="C2">CrsTaken2</CrsTaken>
+    </Student>
+    <Student StudId="S2">
+      <Name><First>Ram</First><Last>Sharma</Last></Name>
+      <Status>Active</Status>
+      <CrsTaken CrsCode="C1">CrsTaken1</CrsTaken>
+    </Student>
+  </Students>
+  <Classes>
+    <Class>
+      <Semester>Fall 2026</Semester>
+      <ClassRoster Members="S1 S2">Roster1</ClassRoster>
+    </Class>
+  </Classes>
+  <Courses>
+    <Course CrsCode="C1">Web Technology I</Course>
+    <Course CrsCode="C2">Data Structures</Course>
+  </Courses>
+</Report>

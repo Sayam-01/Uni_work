@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 10 - Custom List Markers</title>
+<style>
+
+ul.devices {
+  list-style: none;
+  padding-left: 0;
+}
+ul.devices li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 5px;
+}
+ul.devices li::before {
+  content: "\1F5B1";
+  position: absolute;
+  left: 0;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Devices</h2>
+<ul class="devices">
+  <li>Mouse</li>
+  <li>Keyboard</li>
+  <li>Monitor</li>
+  <li>Printer</li>
+  <li>Touchpad</li>
+</ul>
+
+
+  <hr>
+  <footer style="text-align:left; font-weight:bold; margin-top:20px;">
+    By Sayam Shrestha
+  </footer>
+
+</body>
+</html>

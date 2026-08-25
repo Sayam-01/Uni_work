@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 4 - Built-in Objects</title>
+
+</head>
+<body>
+
+<h2>Built-in JavaScript Objects</h2>
+<pre id="output"></pre>
+
+<script>
+var out = "";
+
+// Array methods
+var arr = [5, 3, 8, 1];
+out += "Array: " + arr + "\n";
+out += "sort(): " + arr.sort() + "\n";
+out += "push(10): " + (arr.push(10), arr) + "\n";
+out += "pop(): " + arr.pop() + " -> " + arr + "\n\n";
+
+// Date methods
+var d = new Date();
+out += "Date getFullYear(): " + d.getFullYear() + "\n";
+out += "Date getMonth(): " + d.getMonth() + "\n";
+out += "Date toDateString(): " + d.toDateString() + "\n\n";
+
+// String methods
+var s = "Hello World";
+out += "String toUpperCase(): " + s.toUpperCase() + "\n";
+out += "String length: " + s.length + "\n";
+out += "String indexOf('World'): " + s.indexOf("World") + "\n\n";
+
+// Math methods
+out += "Math.max(3,7,2): " + Math.max(3,7,2) + "\n";
+out += "Math.round(4.6): " + Math.round(4.6) + "\n";
+out += "Math.sqrt(16): " + Math.sqrt(16) + "\n";
+
+document.getElementById("output").innerText = out;
+</script>
+
+
+  <hr>
+  <footer style="text-align:left; font-weight:bold; margin-top:20px;">
+    By Sayam Shrestha
+  </footer>
+
+</body>
+</html>

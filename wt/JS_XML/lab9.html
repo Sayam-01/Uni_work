@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 9 - jQuery Effects</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<h2>jQuery Effects on Image</h2>
+<img id="myImg" src="https://picsum.photos/seed/jqeffect/250/200" alt="Effect image"><br><br>
+<button id="hideBtn">Hide</button>
+<button id="showBtn">Show</button>
+<button id="fadeBtn">Fade Out</button>
+<button id="stopBtn">Stop</button>
+
+<script>
+$(document).ready(function() {
+  $("#hideBtn").click(function() { $("#myImg").hide(1000); });
+  $("#showBtn").click(function() { $("#myImg").show(1000); });
+  $("#fadeBtn").click(function() { $("#myImg").fadeOut(2000); });
+  $("#stopBtn").click(function() { $("#myImg").stop(); });
+});
+</script>
+
+
+  <hr>
+  <footer style="text-align:left; font-weight:bold; margin-top:20px;">
+    By Sayam Shrestha
+  </footer>
+
+</body>
+</html>

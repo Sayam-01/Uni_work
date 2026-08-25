@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 6 - Event Handling</title>
+
+</head>
+<body>
+
+<h2>JavaScript Event Handling</h2>
+<button id="btn1">Click Me</button>
+<input type="text" id="txt1" placeholder="Type here (keyup)">
+<div id="box1" style="width:150px;height:80px;background:lightblue;margin-top:10px;">Hover / Mouseout here</div>
+<p id="log"></p>
+
+<script>
+var log = document.getElementById("log");
+
+document.getElementById("btn1").onclick = function() {
+  log.innerText = "Button was clicked (onclick event).";
+};
+
+document.getElementById("txt1").addEventListener("keyup", function() {
+  log.innerText = "Key released, current value: " + this.value;
+});
+
+document.getElementById("box1").addEventListener("mouseover", function() {
+  log.innerText = "Mouse entered the box (mouseover event).";
+});
+document.getElementById("box1").addEventListener("mouseout", function() {
+  log.innerText = "Mouse left the box (mouseout event).";
+});
+</script>
+
+
+  <hr>
+  <footer style="text-align:left; font-weight:bold; margin-top:20px;">
+    By Sayam Shrestha
+  </footer>
+
+</body>
+</html>

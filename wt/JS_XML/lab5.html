@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 5 - Form Validation</title>
+
+</head>
+<body>
+
+<h2>Application Form with Validation</h2>
+<form onsubmit="return validateForm()">
+  Name: <input type="text" id="name"><br><br>
+  Age: <input type="text" id="age"><br><br>
+  Phone: <input type="text" id="phone"><br><br>
+  Email: <input type="text" id="email"><br><br>
+  College:
+  <select id="college">
+    <option value="">--Select--</option>
+    <option value="amrit">Amrit Campus</option>
+    <option value="ku">Kathmandu University</option>
+  </select><br><br>
+  Gender:
+  <input type="radio" name="gender" value="male"> Male
+  <input type="radio" name="gender" value="female"> Female<br><br>
+  <input type="checkbox" id="terms"> I accept all the terms<br><br>
+  <input type="submit" value="Submit">
+</form>
+<p id="error" style="color:red;"></p>
+
+<script>
+function validateForm() {
+  var name = document.getElementById("name").value.trim();
+  var age = document.getElementById("age").value.trim();
+  var phone = document.getElementById("phone").value.trim();
+  var email = document.getElementById("email").value.trim();
+  var college = document.getElementById("college").value;
+  var gender = document.querySelector('input[name="gender"]:checked');
+  var terms = document.getElementById("terms").checked;
+  var error = document.getElementById("error");
+
+  if (!name || !age || !phone || !email || !college || !gender || !terms) {
+    error.innerText = "All fields are required.";
+    return false;
+  }
+  var namePattern = /^[A-Za-z ]{7,}$/;
+  if (!namePattern.test(name)) {
+    error.innerText = "Name must contain only letters/spaces and be more than 6 characters.";
+    return false;
+  }
+  if (!/^\d+$/.test(age) || age < 20 || age > 50) {
+    error.innerText = "Age must be an integer between 20 and 50.";
+    return false;
+  }
+  if (!/^(98|97)\d{8}$/.test(phone)) {
+    error.innerText = "Phone must be 10 digits and start with 98 or 97.";
+    return false;
+  }
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    error.innerText = "Invalid email format.";
+    return false;
+  }
+  error.style.color = "green";
+  error.innerText = "Form submitted successfully!";
+  return false;
+}
+</script>
+
+
+  <hr>
+  <footer style="text-align:left; font-weight:bold; margin-top:20px;">
+    By Sayam Shrestha
+  </footer>
+
+</body>
+</html>

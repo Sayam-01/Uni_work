@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lab13.xsl"?>
+<!-- By Sayam Shrestha -->
+<Library>
+  <!-- Simple element type: contains only text -->
+  <LibraryName>Amrit Campus Library</LibraryName>
+
+  <!-- Complex element type: contains child elements and attributes -->
+  <Book id="B001">
+    <Title>Web Technology I</Title>
+    <Author>Sayam Shrestha</Author>
+    <Price currency="NPR">750</Price>
+  </Book>
+  <Book id="B002">
+    <Title>Data Structures and Algorithms</Title>
+    <Author>Ram Sharma</Author>
+    <Price currency="NPR">900</Price>
+  </Book>
+</Library>
